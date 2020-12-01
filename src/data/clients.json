@@ -1,0 +1,65 @@
+{
+  "title": "Portfolio Data",
+  "clients": [
+    {
+      "title": "STEEP",
+      "tagline": "Coffee, Tea and Crystals",
+      "projectDates": "2019 - current"
+    },
+    {
+      "title": "Sonoma Pacific Distribution",
+      "tagline": "Always Take the High Road",
+      "projectDates": "2017 - 2020"
+    },
+    {
+      "title": "Gaby Inc.",
+      "tagline": "It's What's on the Inside That Counts",
+      "projectDates": "2019 - 2020"
+    },
+    {
+      "title": "Gabriella's Kitchen",
+      "tagline": "High Protein, Low Carb Frozen Meals",
+      "projectDates": "2019"
+    }
+  ],
+  "navigation": [
+    {
+      "label": "Home",
+      "link": "#home" 
+    },
+    {
+      "label": "Work",
+      "link": "#projects"
+    },
+    {
+      "label": "Contact",
+      "link": "#contact"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Scaffold",
+      "description": "A minimal Wordpress theme available for free download. Features a responsive mobile-ready layout and extensive Customizer functionality.",
+      "tags": ["javascript", "jQuery", "PHP"],
+      "link": "#",
+      "gitHub": "#",
+      "image": "/scaffold-screenshot.png"
+    },
+    {
+      "title": "Cleanser",
+      "description": "A clean and easy to style Wordpress theme available for free",
+      "tags": ["javascript", "jQuery", "PHP"],
+      "link": "#",
+      "gitHub": "#",
+      "image": "/laptop-mockup-ncc-sm.jpg"
+    },
+    {
+      "title": "Napa Creative Co.",
+      "description": "A clean and easy to style Wordpress theme available for free",
+      "tags": ["Gatsby", "Sanity CMS", "React", "GraphQL"],
+      "link": "https://www.napacreativeco.com",
+      "gitHub": "#",
+      "image": "/laptop-mockup-ncc-sm.jpg"
+    }
+  ]
+}

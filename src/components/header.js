@@ -1,42 +1,55 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import { Link, useStaticQuery, graphql } from "gatsby"
+import React from 'react'
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+import JSONData from "../data/clients.json"
+import Hamburger from './hamburger'
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
+
+export default function Header({ data }) {
+
+    const query = useStaticQuery(graphql`
+      query TitleQuery {
+        site {
+          siteMetadata {
+            title
+            description
+          }
+        }
+      }`
+    )
+    return (
+
+        <header>
+          <div className="row">
+            <div className="cell left">
+              <Link to="/" className="logo">{query.site.siteMetadata.title}</Link>
+            </div>
+            <div className="cell right">
+              <div className="main-menu">
+                <ul>
+                  {JSONData.navigation.map((data, index) => {
+                      return <li><a href={data.link} title={data.label}>{data.label}</a></li>
+                  })}
+                </ul>
+              </div>
+
+              <div class="mobile-menu">
+              <h2 className="title">{query.site.siteMetadata.title}</h2>
+                <ul>
+                  {JSONData.navigation.map((data, index) => {
+                      return <li><a href={data.link} title={data.label}>{data.label}</a></li>
+                  })}
+                </ul>
+                <Link to="/resume" className="button">Resume</Link>
+              </div>
+
+              <Link to="/resume" className="button">Resume</Link>
+            </div>
+          </div>
+        </header>
+      )
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
-export default Header
+
+
