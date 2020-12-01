@@ -1,0 +1,24 @@
+.show-menu {
+  animation: slidingMenu 0.5s;
+  -webkit-animation-fill-mode: forwards; 
+  -moz-animation-fill-mode: forwards;   
+  -o-animation-fill-mode: forwards;     
+  -ms-animation-fill-mode: forwards;   
+  animation-fill-mode: forwards;  
+}
+.hide-menu {
+  animation: closingMenu 0.3s;
+  -webkit-animation-fill-mode: forwards; 
+  -moz-animation-fill-mode: forwards;   
+  -o-animation-fill-mode: forwards;     
+  -ms-animation-fill-mode: forwards;   
+  animation-fill-mode: forwards;  
+}
+@keyframes slidingMenu {
+  0% { right: -100%; }
+  100% { right: 0%; }
+}
+@keyframes closingMenu {
+  0% { right: 0%; }
+  100% { right: -100%; }
+}

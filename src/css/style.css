@@ -428,8 +428,14 @@ textarea {
   .main-menu {
     display: none;
   }
+  .resume-desktop {
+    display: none;
+  }
   .hamburger {
     display: block;
+  }
+  #burger-container {
+    z-index: 999;
   }
   .mobile-menu {
     align-items: center;
@@ -440,8 +446,9 @@ textarea {
     height: 100vh;
     background: #222222;
     top: 0;
-    right: 0;
+    right: -100%;
     bottom: 0;
+
   }
   .mobile-menu h2 {
     color: #fff;
@@ -474,7 +481,9 @@ textarea {
   .page {
     padding: 0px 40px;
   }
-  
+  .hero {
+    padding: 160px 0px;
+  }
   .about .row {
     flex-wrap: wrap;
   }
@@ -495,10 +504,6 @@ textarea {
     width: 300px;
     margin: 80px auto 80px auto;
   }
-  /* .recent-projects h2.title::after {
-    margin-left: 0;
-    width: 30vw;
-  } */
   .bottom-line {
     display: none !important;
   }
