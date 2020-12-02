@@ -39,19 +39,19 @@
   "projects": [
     {
       "title": "Scaffold",
-      "description": "A minimal Wordpress theme available for free download. Features a responsive mobile-ready layout and extensive Customizer functionality.",
-      "tags": ["javascript", "jQuery", "PHP"],
+      "description": "A minimal Wordpress theme available for free download. Features a responsive mobile-ready layout and extensive Customizer functionality. Coming soon!",
+      "tags": ["Wordpress", "PHP", "jQuery"],
       "link": "#",
       "gitHub": "#",
       "image": "/scaffold-screenshot.png"
     },
     {
-      "title": "Cleanser",
-      "description": "A clean and easy to style Wordpress theme available for free",
-      "tags": ["javascript", "jQuery", "PHP"],
-      "link": "#",
-      "gitHub": "#",
-      "image": "/laptop-mockup-ncc-sm.jpg"
+      "title": "Quickly",
+      "description": "A minimal jumpstarter theme for wordpress",
+      "tags": ["Wordpress", "PHP", "javascript", "jQuery"],
+      "link": "https://github.com/napacreativeco/quickly",
+      "gitHub": "https://github.com/napacreativeco/quickly",
+      "image": "/quickly-screenshot.png"
     },
     {
       "title": "Napa Creative Co.",
@@ -60,6 +60,14 @@
       "link": "https://www.napacreativeco.com",
       "gitHub": "#",
       "image": "/laptop-mockup-ncc-sm.jpg"
+    },
+    {
+      "title": "NV Massage & Wellness",
+      "description": "A clean and easy to style Wordpress theme available for free",
+      "tags": ["Wordpress", "PHP", "jQuery"],
+      "link": "https://www.nvmassageandwellness.com",
+      "gitHub": "",
+      "image": "/nv-massage-and-wellness.jpg"
     }
   ]
 }
