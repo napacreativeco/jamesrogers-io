@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import BigArrow from '../images/fat-arrow-right.svg'
 import GitHub from '../images/github-blk.svg'
 import JSONData from "../data/clients.json"
@@ -22,9 +21,9 @@ export default function RecentProjects() {
               </div>
 
               <div className="info" style={{ padding: '20px' }}>
-                <Link to={data.link} title={data.title} style={{ textDecoration: 'none' }}>
+                <a href={data.link} title={data.title} style={{ textDecoration: 'none' }}>
                   <h3 >{data.title}</h3>
-                </Link>
+                </a>
 
                 <ul>{data.tags.map((node) => {
                   return <li>{node}</li>
@@ -34,12 +33,12 @@ export default function RecentProjects() {
               </div>
 
               <div className="button">
-                <Link to={data.link}>
+                <a href={data.link} title="External Link">
                   <img src={BigArrow} alt={data.title} />
-                </Link>
-                <Link to={data.gitHub}>
+                </a>
+                <a href={data.gitHub} title="GitHub" >
                   <img src={GitHub} alt="GitHub" />
-                </Link>
+                </a>
               </div>
 
             </div>
