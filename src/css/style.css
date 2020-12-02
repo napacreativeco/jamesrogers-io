@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5 {
   padding: 0;
   margin: 0;
 }
-p, a ,label, span, footer, tr, li, input, button {
+p, a ,label, span, footer, tr, li, input, button, form button {
   font-family: 'DM Sans', sans-serif;
   font-weight: 400;  
 }
@@ -118,9 +118,11 @@ header .main-menu ul {
   flex-direction: row;
   flex-wrap: nowrap;
   list-style: none;
+  margin: 0;
 }
 header li {
   margin-right: 20px;
+  margin-bottom: 0;
 }
 header a {
   text-decoration: none;
@@ -244,7 +246,9 @@ header .button {
   transition: all 0.3s;
 }
 .about img {
+  width: 100%;
   border-radius: 6px;
+  margin: 0;
 }
 .about .wrapper:hover::after {
   backdrop-filter: blur(0px);
@@ -317,11 +321,14 @@ header .button {
   list-style: none;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
 }
 .recent-projects li {
   display: flex;
   flex-wrap: wrap;
   margin-right: 8px;
+  margin-bottom: 4px;
   font-size: 14px;
 }
 .recent-projects li::before {
@@ -356,6 +363,9 @@ header .button {
 }
 .recent-projects svg {
   fill: #484848 !important;
+}
+.recent-projects img {
+  margin: 0 !important;
 }
 
 /* Contact */
@@ -466,7 +476,7 @@ textarea {
     border-bottom: 1px solid #fff;
     padding: 40px 0px;
   }
-  .mobile-menu li a {
+  .mobile-menu li p {
     font-size: 1.8rem;
     line-height: 2;
     color: #fff;

@@ -11,7 +11,6 @@ export default function Hamburger() {
       var burger = document.getElementById('burger');
       var burgerBox = document.getElementById('burger-container');
       var menu = document.getElementById('mobile-menu');
-      var body = document.getElementById('page');
 
 
       if ( burger.classList.contains('is-active') ) {
@@ -36,9 +35,9 @@ export default function Hamburger() {
 
     return (
 
-      <button id="burger" class="hamburger hamburger--spin" type="button" onClick={handleClick}>
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
+      <button id="burger" className="hamburger hamburger--spin" type="button" onClick={handleClick}>
+        <span className="hamburger-box">
+          <span className="hamburger-inner"></span>
         </span>
       </button>
       )
