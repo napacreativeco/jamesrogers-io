@@ -37,7 +37,7 @@ export default function RecentProjects() {
                 <Link to={data.link}>
                   <img src={BigArrow} alt={data.title} />
                 </Link>
-                <Link to={data.link}>
+                <Link to={data.gitHub}>
                   <img src={GitHub} alt="GitHub" />
                 </Link>
               </div>

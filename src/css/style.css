@@ -143,8 +143,7 @@ header .button {
 .hero {
   width: 100%;
   position: relative;
-  padding: 120px 0px;
-  min-height: 90vh;
+  padding: 180px 0px 180px 0px;
 }
 .hero .row {
   display: flex;
@@ -491,6 +490,9 @@ textarea {
     width: 100%;
     justify-content: center;
     padding-right: 0;
+  }
+  .about h2.title::after {
+    width: 60vw;
   }
   .about .cell.right {
     padding-left: 15%;
