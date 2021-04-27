@@ -1,9 +1,9 @@
 {
   "name": "gatsby-starter-default",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "A portfolio of Graphic and Web Design work by James Rogers",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "James Rogers <hello@napacreativeco.com>",
   "dependencies": {
     "gatsby": "^2.26.1",
     "gatsby-background-image": "^1.3.1",
@@ -11,6 +11,8 @@
     "gatsby-plugin-manifest": "^2.6.1",
     "gatsby-plugin-offline": "^3.4.0",
     "gatsby-plugin-react-helmet": "^3.4.0",
+    "gatsby-plugin-react-svg": "^3.0.1",
+    "gatsby-plugin-sass": "^4.3.0",
     "gatsby-plugin-sharp": "^2.8.0",
     "gatsby-source-filesystem": "^2.6.1",
     "gatsby-transformer-json": "^2.6.0",
@@ -20,7 +22,9 @@
     "react-dom": "^16.12.0",
     "react-headroom": "^3.0.1",
     "react-helmet": "^6.1.0",
-    "react-scroll-into-view": "^1.8.2"
+    "react-scroll-into-view": "^1.8.2",
+    "sass": "^1.32.8",
+    "styled-components": "^5.2.3"
   },
   "devDependencies": {
     "prettier": "2.1.2"

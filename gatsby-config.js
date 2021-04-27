@@ -13,6 +13,7 @@ module.exports = {
         path: `${__dirname}/src/images`
       },
     },
+    `gatsby-plugin-sass`,
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,

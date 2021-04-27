@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Open+Sans:wght@300;400;600&display=swap');
+:root {
+  --main-accent: #666666;
+  --body: 'Open Sans', sans-serif;
+  --title: 'DM Sans', sans-serif;
+}
+body, html {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+html { scroll-behavior: smooth; }
+
+/* Reset */
+* { box-sizing: border-box; }
+ul { margin: 0; padding: 0; }
+li { margin-bottom: 0; }
+a { color: inherit; text-decoration: none; }
+img { margin: 0; padding: 0; }
+
+
+/* Typography */
+@import url('./typography.scss');
+a, button,
+input[type="submit"] {
+  cursor: pointer;
+}
+
+/* Globals */
+.page {
+  padding: 0px 0px;
+}
+
+/* Header */
+.headroom--pinned {
+  background: #eaeaea;
+}
+
+/* Bottom Lines */
+.bottom-line {
+  position: fixed;
+  float: left;
+}
+.bottom-line ul {
+  list-style: none;
+  margin: 0;
+}
+.bottom-line.left {
+  bottom: 0px;
+  left: 40px;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.bottom-line.left::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 90px;
+  margin: 0px auto;
+  background-color: var(--main-accent);
+}
+.bottom-line.left li {
+  padding: 5px 0px;
+}
+.bottom-line li:last-of-type {
+  padding-bottom: 10px;
+}
+.bottom-line.left img {
+  width: 20px;
+}
+.bottom-line.right {
+  bottom: 0;
+  right: 40px;
+}
+.bottom-line.right p {
+  writing-mode: vertical-rl;
+  padding-bottom: 20px;
+}
+.bottom-line.right::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 60px;
+  margin: 0px auto;
+  background-color: var(--main-accent);
+}
+
+
+/* Mobile Nav Flyout */
+.closed {
+  display: none;
+  position: relative;
+}
+.opened {
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #eaeaea;
+  z-index: 30;
+}
+
+
+
+/* ||MQ|| X-Large */
+@media only screen and (min-width: 1400px ) {
+
+}
+/* ||MQ|| Small */
+@media only screen and (max-width: 768px ) {
+  .main-menu {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .bottom-line {
+    display: none !important;
+  }
+}

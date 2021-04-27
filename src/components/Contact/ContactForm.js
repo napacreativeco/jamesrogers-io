@@ -2,7 +2,21 @@
 // Then import it with 'import MyForm from "./myform.js"'.
 // Finally, add a <MyForm/> element whereever you wish to display the form.
 
-import React from "react";
+import React from 'react'
+import styled from 'styled-components'
+
+const TopRow = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  @media only screen and (max-width: 768px ) {
+    grid-template-columns: 1fr;
+  }
+`;
+const Titles = styled.label`
+  font-family: var(--title);
+  font-weight: 600;
+`;
 
 export default class MyForm extends React.Component {
   constructor(props) {
@@ -22,22 +36,22 @@ export default class MyForm extends React.Component {
         method="POST"
         className="contact-form"
       >
-        {/* add your custom form HTML here */}
-        <div className="row">
+        <TopRow>
 
-          <div className="cell">
-            <span>Name</span>
-            <input type="text" name="email"/>
+          <div>
+            <Titles htmlFor="name">Name</Titles>
+            <input type="text" name="name"/>
           </div>
           
-          <div className="cell">
-            <span>Email</span>
-              <input type="email" name="email" />
+          <div>
+            <Titles htmlFor="email">Email</Titles>
+            <input type="email" name="email" />
           </div>
-        </div>
-        <label>Message<br />
-          <textarea name="message"></textarea>
-        </label>
+        </TopRow>
+
+        <Titles htmlFor="message">Message</Titles>
+        <textarea name="message"></textarea>
+
         {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
         {status === "ERROR" && <p>Ooops! There was an error.</p>}
       </form>
