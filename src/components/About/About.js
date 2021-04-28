@@ -20,9 +20,8 @@ const AboutImage = styled.div`
   }
   @media only screen and (max-width: 768px ) {
     img {
-      width: 80%;
-      max-width: 200px;
-      height: auto;
+      width: 120px;
+      height: 120px;
     }
   }
 `;
