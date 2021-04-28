@@ -122,6 +122,7 @@ const Tags = styled.ul`
 `;
 
 export default function RecentWork() {
+
   return (
     <section style={{ background: '#eaeaea', padding: '80px 80px' }}>
 
