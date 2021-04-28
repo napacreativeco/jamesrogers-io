@@ -16,6 +16,7 @@ const AboutImage = styled.div`
   img {
     width: 80%;
     max-width: 300px;
+    height: auto;
   }
   @media only screen and (max-width: 768px ) {
     img {
