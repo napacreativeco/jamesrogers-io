@@ -2,6 +2,16 @@ import React from 'react';
 import JSONData from "../../data/clients.json"
 import styled from 'styled-components'
 
+const WorkSection = styled.section`
+  background: #eaeaea;
+  padding: 80px 80px;
+  @media (max-width: 1500px) {
+    padding: 80px 40px;
+  }
+  @media (max-width: 767.98px) {
+    padding: 80px 20px;
+  }
+`;
 const WorkBlock = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -10,8 +20,8 @@ const WorkBlock = styled.div`
     grid-template-columns: 1fr 1fr;
   }
   @media (max-width: 767.98px) {
-    grid-template-columns: 100%;
-    padding: 40px 20px;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
   }
 `;
 const Article = styled.div`
@@ -124,7 +134,7 @@ const Tags = styled.ul`
 export default function RecentWork() {
 
   return (
-    <section style={{ background: '#eaeaea', padding: '80px 80px' }}>
+    <WorkSection>
 
       <h2 style={{ fontFamily: 'var(--title)', marginBottom: '15px' }}>Case Studies</h2>
       <p style={{ fontFamily: 'var(--body) '}}>Read through a few of my Case Studies to see how I approach my projects</p>
@@ -172,6 +182,6 @@ export default function RecentWork() {
           );
         })}
       </WorkBlock>
-    </section>
+    </WorkSection>
   )
 }

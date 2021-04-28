@@ -8,7 +8,7 @@ const HeroStyles = styled.section`
   position: relative;
   padding: 120px 100px 120px 100px;
   @media only screen and (max-width: 768px ) {
-    padding: 60px 0px;
+    padding: 60px 20px;
   }
   .row {
     display: flex;
