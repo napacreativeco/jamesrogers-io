@@ -12,6 +12,7 @@ const HeaderStyles = styled.header`
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: relative;
   }
   .main-menu ul {
     display: flex;
@@ -26,15 +27,23 @@ const HeaderStyles = styled.header`
     display: none;
   }
   @media only screen and (max-width: 768px ) {
-    .hamburger,
-    .mobile-menu {
+    padding: 0px 10px;
+    .hamburger {
       display: block;
+      position: absolute;
+      right: 20px;
+      background: #000;
+      color: #eaeaea;
+      padding: 6px 12px;
+      border-radius: 25px;
+      border: 0;
     }
   }
 `;
 const HeaderRow = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   padding: 20px 10px;
   width: 100%;
@@ -47,9 +56,9 @@ const NavLinks = styled.li`
     text-decoration: none;›
     font-weight: 500;
   }
-`;
-const MobileMenu = styled.div`
-
+  @media only screen and (max-width: 768px ) {
+    display: none;
+  }
 `;
 const LogoContainer = styled.div`
   display: flex;
@@ -61,6 +70,11 @@ const LogoContainer = styled.div`
     margin-right: 12px;
     max-width: 20px;
   }
+  @media only screen and (max-width: 768px ) {
+    svg {
+      display: none;
+    }
+  }
 `;
 const ResumeButton = styled.button`
   padding: 6px 16px;
@@ -68,7 +82,28 @@ const ResumeButton = styled.button`
   color: #eaeaea;
   border-radius: 25px;
   border: 0px;
+  @media only screen and (max-width: 768px ) {
+    display: none;
+  }
 `;
+const MobileMenu = styled.div`
+  @media only screen and (max-width: 768px ) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--body);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    ul {
+      list-style: none;
+    }
+    li {
+      margin: 40px 0px;
+    }
+  }
+`;
+
 
 
 
@@ -135,21 +170,37 @@ export default function Header({ data }) {
 
       {/* Mobile Menu */}
       <MobileMenu className={menuStyleClass} style={{ display: menuState }}>
+          <LogoContainer>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+            hello@napacreativeco.com
+          </LogoContainer> 
 
-        <p>Logo</p>
+          <ul>
+            {JSONData.navigation.map((data, index) => {
+              return (
+                <li className="mobile-menu-link" key={data.label}>
+                  <ScrollTo selector={data.link} onClick={() => { 
+                    openMenuState('none');
+                    changeMenuName('menu');
+                  }}>
+                    <p title={data.label}>{data.label}</p>
+                  </ScrollTo>
+                </li>
+              );
+            })}
+          </ul>
 
-        <ul>
-          {JSONData.navigation.map((data, index) => {
+          {JSONData.resume.map((node) => {
             return (
-              <li className="mobile-menu-link" key={data.label}>
-                <ScrollTo selector={data.link}>
-                  <p title={data.label}>{data.label}</p>
-                </ScrollTo>
-              </li>
-            );
+              <ResumeButton
+                onClick={() => window.open(node.link, "_blank")}
+                onKeyDown={() => window.open(node.link, "_blank")}
+                style={{ display: 'block' }}
+              >
+                Resume 
+              </ResumeButton>
+            )
           })}
-        </ul>
-
       </MobileMenu>
       {/* END: mobile */}
 

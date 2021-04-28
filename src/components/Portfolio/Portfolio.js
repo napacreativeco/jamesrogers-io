@@ -5,6 +5,9 @@ import JSONData from "../../data/clients.json"
 const PortfolioSection = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  @media (max-width: 767.98px) {
+    grid-template-columns: 1fr;
+  }
 `;
 const PortfolioOverlay = styled.div`
   display: flex;
