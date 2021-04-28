@@ -22,6 +22,7 @@ const AboutImage = styled.div`
     img {
       width: 80%;
       max-width: 200px;
+      height: auto;
     }
   }
 `;
