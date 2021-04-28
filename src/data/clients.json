@@ -65,7 +65,7 @@
     },
     {
       "title": "Napa Creative Co.",
-      "description": "A clean and easy to style Wordpress theme available for free",
+      "description": "A GatsbyJS based web application for promoting my freelance work",
       "tags": ["Gatsby", "Sanity CMS", "React", "GraphQL", "SCSS"],
       "link": "https://www.napacreativeco.com/this-site",
       "image": "/ncc-computer.jpg"
