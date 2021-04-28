@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 
 import JSONData from '../../data/clients.json'
-
 import ScrollTo from 'react-scroll-into-view'
 
 const HeaderStyles = styled.header`
@@ -97,9 +96,15 @@ const MobileMenu = styled.div`
     align-items: center;
     ul {
       list-style: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 40px;
+      margin-bottom: 40px;
     }
     li {
-      margin: 40px 0px;
+      margin: 30px 0px;
+      text-align: center;
     }
   }
 `;
@@ -170,37 +175,38 @@ export default function Header({ data }) {
 
       {/* Mobile Menu */}
       <MobileMenu className={menuStyleClass} style={{ display: menuState }}>
-          <LogoContainer>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
-            hello@napacreativeco.com
-          </LogoContainer> 
 
-          <ul>
-            {JSONData.navigation.map((data, index) => {
-              return (
-                <li className="mobile-menu-link" key={data.label}>
-                  <ScrollTo selector={data.link} onClick={() => { 
-                    openMenuState('none');
-                    changeMenuName('menu');
-                  }}>
-                    <p title={data.label}>{data.label}</p>
-                  </ScrollTo>
-                </li>
-              );
-            })}
-          </ul>
+        <LogoContainer>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/></svg>
+          hello@napacreativeco.com
+        </LogoContainer> 
 
-          {JSONData.resume.map((node) => {
+        <ul>
+          {JSONData.navigation.map((data, index) => {
             return (
-              <ResumeButton
-                onClick={() => window.open(node.link, "_blank")}
-                onKeyDown={() => window.open(node.link, "_blank")}
-                style={{ display: 'block' }}
-              >
-                Resume 
-              </ResumeButton>
-            )
+              <li className="mobile-menu-link" key={data.label}>
+                <ScrollTo selector={data.link} onClick={() => { 
+                  openMenuState('none');
+                  changeMenuName('menu');
+                }}>
+                  <p title={data.label}>{data.label}</p>
+                </ScrollTo>
+              </li>
+            );
           })}
+        </ul>
+
+        {JSONData.resume.map((node) => {
+          return (
+            <ResumeButton
+              onClick={() => window.open(node.link, "_blank")}
+              onKeyDown={() => window.open(node.link, "_blank")}
+              style={{ display: 'block' }}
+            >
+              Resume 
+            </ResumeButton>
+          )
+        })}
       </MobileMenu>
       {/* END: mobile */}
 
