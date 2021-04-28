@@ -7,7 +7,12 @@ import ScrollTo from 'react-scroll-into-view'
 
 const HeaderStyles = styled.header`
   width: 100%;
-  padding: 0;
+  padding: 0px 20px;
+  .main-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
   .main-menu ul {
     display: flex;
     justify-content: flex-end;
@@ -51,12 +56,18 @@ const LogoContainer = styled.div`
   align-items: center;
   font-family: var(--title);
   font-weight: 600;
-  padding-left: 20px;
   width: 50%;
   svg {
     margin-right: 12px;
     max-width: 20px;
   }
+`;
+const ResumeButton = styled.button`
+  padding: 6px 16px;
+  background: #000;
+  color: #eaeaea;
+  border-radius: 25px;
+  border: 0px;
 `;
 
 
@@ -103,6 +114,17 @@ export default function Header({ data }) {
               )
             })}
           </ul>
+
+          {JSONData.resume.map((node) => {
+            return (
+              <ResumeButton
+                onClick={() => window.open(node.link, "_blank")}
+                onKeyDown={() => window.open(node.link, "_blank")}
+              >
+                Resume 
+              </ResumeButton>
+            )
+          })}
         </nav>
 
         <button className="hamburger" onClick={toggle} style={{ zIndex: '99', position: 'absolute' }}>

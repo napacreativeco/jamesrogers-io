@@ -1,5 +1,10 @@
 {
   "title": "Portfolio Data",
+  "resume": [
+    {
+      "link": "/resume-2021--print.pdf"
+    }
+  ],
   "clients": [
     {
       "title": "STEEP",

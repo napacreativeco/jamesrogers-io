@@ -12,8 +12,16 @@ export default function Accents() {
     <div>
       <BottomLine className="bottom-line left">
         <ul>
-          <li key="0"><img src={GitHub} alt="GitHub" /></li>
-          <li key="2"><img src={LinkedIn} alt="LinkedIn" /></li>
+          <li key="0">
+            <a href="https://github.com/napacreativeco" title="GitHub" target="_blank" rel="noreferrer">
+              <img src={GitHub} alt="GitHub" />
+            </a>
+          </li>
+          <li key="2">
+            <a href="https://www.linkedin.com/in/jamesadamrogers/" title="LinkedIn" rel="noreferrer">
+              <img src={LinkedIn} alt="LinkedIn" />
+            </a>
+          </li>
         </ul>
       </BottomLine>
 
